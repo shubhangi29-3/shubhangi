@@ -1,0 +1,805 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Robotics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/transitions.css" />
+	</head>
+	<body class="is-preload">
+		<!-- Loader -->
+			<div class="loader"></div>
+
+			<div class="transition transition-3 is-active"></div>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/Shubhangi.jpeg" alt="" /></span>
+							<h1 id="title">Shubhangi Sinha</h1>
+							<p>Mechanical Engineer</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
+								<li><a href="#project" id="rob-link"><span class="icon solid fa-robot">Robotics</span></a></li>
+								<li><a href="simulations.html" id="sim-link"><span class="icon solid fa-desktop">Simulations</span></a></li>
+								<li><a href="design.html" id="exp-link"><span class="icon solid fa-cogs">Design and Testing</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://github.com/shubhangi29-3" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="mailto:sinhashubh29@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://www.linkedin.com/in/sinhashubhangi/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							
+						</ul>	
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt"> <strong>Robotics</strong></h2>
+								<h3 class="alt">Robotics: Navigating through Excellence</h3>
+								<p><em>"The robots are coming, whether we like it or not, and will change our economy in dramatic ways."
+									<br /> - Bill Gates</em> 						
+								</p>
+								<p></p>
+							</header>
+
+							<!-- <footer>
+								<a href="#project" class="button scrolly">Check out my work!</a>
+							</footer> -->
+
+						</div>
+					</section>
+
+				<!-- Projects -->
+					<section id="project" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Projects</h2>
+							</header>
+
+							<p>
+								This page is dedicated to my projects in autonomous robots and
+								learning systems. All the projects are published on GitHub and
+								are free to use under MIT License. Clicking on each tab will
+								generate a popup describing the project briefly. Links to resources
+								are provided in the page of the corresponding project. Feel free
+								to drop a message in 'Contact' section if you have further
+								questions regarding my projects!
+							</p>
+
+							<div class="row">
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<div class="vid fit trigger">
+											<video class="lazy" autoplay loop muted playsinline poster="images/robotics/robVidMain1.jpg">
+												<source data-src="images/robVidMain.mp4" type=video/mp4>
+											</video>
+											<header>
+												<h3>Autonomous System Integrartion</h3>
+											</header>
+										</div>
+										<div class="modal">
+											<div class="modal-content">
+												<span class="close-button">×</span>
+												<h3>Autonomous System Integrartion</h3>
+												<div class="modal-body">
+													<p>
+														This project is a final assimilation of all the aspects of autonomous
+														robotics. The robot is dropped in partially known environment (such as
+														bounds and location of certain walls) without localization. The robot
+														uses the partial information of the environment, localizes itself,
+														generates Probabilistic RoadMap (PRM) to next goal, and discovers rest of
+														the map while visiting all the goals.
+													</p>
+													<p>
+														<strong>Github Link: </strong><a href="https://github.com/pamraat/AlmightyRobot">https://github.com/pamraat/AlmightyRobot</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license and iRobotCreateSimulator toolbox
+														which can be downloaded from <a href="https://github.com/autonomousmobilerobots/iRobotCreateSimulatorToolbox">here</a>.
+													</p>
+													<p>
+														The robot uses Particle Filter with depth data from Real Sense camera
+														and plans it motion using low discrepancy based PRM. The mapping is
+														grid based. All the walls are thick, and are accounted for in robot
+														algorithm. The video shows performance of robot when it was intiated
+														from a certain location.
+														<div class="vid fit">
+															<video class="lazy" autoplay loop muted playsinline poster="images/robotics/robVidMain1.jpg">
+																<source data-src="images/robVidMain.mp4" type=video/mp4>
+															</video>
+														</div>
+														The post processed data collected after the run is shown in the figure
+														below. The overhead localization shown in green was not provided to the
+														robot, and the particle filter (particles shown in red) was using depth
+														sensor data only. The trajectory was extremely accurate, while robot
+														managed to visit all the goals.
+														<div class="image fit">
+															<img src="images/robotics/Run.png" />
+														</div>
+														The logic flow chart of the algorithm is shown in the figure below.
+														<div class="image fit">
+															<img src="images/robotics/FinalFlowChart.png" />
+														</div>
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="item">
+										<div class="vid fit trigger">
+											<video class="lazy" autoplay loop muted playsinline poster="images/robotics/robBoids1.jpg">
+												<source data-src="images/robotics/robBoids.mp4" type=video/mp4>
+											</video>
+											<header>
+												<h3>Boids: Multirobot Behavior Control</h3>
+											</header>
+										</div>
+										<div class="modal">
+											<div class="modal-content">
+												<span class="close-button">×</span>
+												<h3>Boids: Multirobot Behavior Control</h3>
+												<div class="modal-body">
+													<p>
+														This project demonstrates the implementation of multirobot
+														system control called Boids developed by Van Hunter Adams.
+														This control algorithm is inspired by flocking behavior of
+														different living organims in the ecosystem like birds and
+														fishes.
+													</p>
+													<p>
+														<strong>Github Link: </strong><a href="https://github.com/pamraat/port-boids">https://github.com/pamraat/port-boids</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license.
+													</p>
+													<p>
+														Boids is an artificial life program that produces startlingly realistic simulations of flocking behavior.
+														Each "boid" follows a very simple set of rules. but they can be summarized as follows:
+														<ul>
+															<li>Separation: boids move away from other boids that are too close</li>
+															<li>Alignment: boids attempt to match the velocities of their neighbors</li>
+															<li>Cohesion: boids move toward the center of mass of their neighbors</li>
+														</ul>
+														Each decision rule has an associated parameter, which can tweaked to achieve
+														the required behvaior. Following represents the behavior of flocking in every
+														4th boid.
+														<div class="vid fit">
+															<video class="lazy" autoplay loop muted playsinline poster="images/robotics/robBoids1.jpg">
+																<source data-src="images/robotics/robBoids.mp4" type=video/mp4>
+															</video>
+														</div>
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="item">
+										<div class="image fit trigger">
+											<img src="images/robotics/pf500.png" alt="" />
+											<header>
+												<h3>Localization using Particle Filter</h3>
+											</header>
+										</div>
+										<div class="modal">
+											<div class="modal-content">
+												<span class="close-button">×</span>
+												<h3>Localization using Particle Filter</h3>
+												<div class="modal-body">
+													<p>
+														This project was developed to localize the robot based on depth camera
+														data and compare with overhead localization and dead reckoning from
+														odometry data. The algorithms robustly handle massive discontinuous,
+														and initialization-sensitivty is low.
+													</p>
+													<p>
+														<strong>Github Link: </strong> <a href="https://github.com/pamraat/port-localization">https://github.com/pamraat/port-localization</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license and iRobotCreateSimulator toolbox
+														which can be downloaded from <a href="https://github.com/autonomousmobilerobots/iRobotCreateSimulatorToolbox">here</a>.
+													</p>
+													<p>
+														A localization algorithm based on Particle Filter using depth sensor data
+														for a robot is developed. Particle Filter(PF) performs significantly better than
+														Extended Kalman Filter in localization without requiring to apply sensor data
+														filters. The performance of PF with 500 particles is shown in the figure below.
+														<div class="image fit">
+															<img src="images/robotics/pf500.png" />
+														</div>
+													</p>
+													<p>
+														However, it has to be noted that the number of particles
+														significantly impact quality of localization. For e.g., 
+														the particle filter with 20 particles is shown below, which 
+														coverges eventually, but takes a while to do so.
+														<div class="image fit">
+															<img src="images/robotics/pf20.png" />
+														</div>
+													</p>
+													<p>
+														These codes used in the simulator were implemented on a
+														real robot. The figure below shows the performance of
+														Particle Filter. Despite the error buildup due to motor
+														slipping, sensing noise, and error instilled due to
+														collision with walls, particles maintain localiation. This
+														operation is ran with 200 particles initialized in the 
+														small space in vicinity of real robots.  
+														<div class="image fit">
+															<img src="images/robotics/PF200Real.jpeg" />
+														</div>
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<div class="vid fit trigger">
+											<video class="lazy" autoplay loop muted playsinline poster="images/robotics/mapping1.jpg">
+												<source data-src="images/robotics/mapping.mp4" type=video/mp4>
+											</video>
+											<header>
+												<h3>Mapping and SLAM</h3>
+											</header>
+										</div>
+										<div class="modal">
+											<div class="modal-content">
+												<span class="close-button">×</span>
+												<h3>Mapping and SLAM</h3>
+												<div class="modal-body">
+													<p>
+														This project was developed to map an unknown environment based on
+														depth camera data. The algorithm is probabilistic and assigns
+														probability if a given part of grid is a wall or not. The same algorithm
+														is then associated with localization techniques to map the environment
+														and localize the robot with respect to that environment, refered to
+														as Simultaneous Localization and Mappin (SLAM).
+													</p>
+													<p>
+														<strong>Github Link: </strong><a href="https://github.com/pamraat/port-mapping">https://github.com/pamraat/port-mapping</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license and iRobotCreateSimulator toolbox
+														which can be downloaded from <a href="https://github.com/autonomousmobilerobots/iRobotCreateSimulatorToolbox">here</a>.
+													</p>
+													<p>
+														The robot is randomly initialized in a map with grid size of 25x25.
+														The video below shows evolution of map as robot moves. The darker the
+														cell, higher probability that they are a wall.
+														<div class="vid fit">
+															<video class="lazy" autoplay loop muted playsinline poster="images/robotics/mapping1.jpg">
+																<source data-src="images/robotics/mapping.mp4" type=video/mp4>
+															</video>
+														</div>
+														These codes used in the simulator were implemented on a
+														real robot. The figure below shows the map estimated by
+														the robot on a given lab environment.
+														<div class="image fit">
+															<img src="images/robotics/mappingReal.png" />
+														</div>
+													</p>
+													<p>
+														A localization algorithm based on Extended Kalman Filter (EKF) using depth sensor data
+														for a robot is integrated with mapping algorithm such that location of the obstacle 
+														is estimated using EKF as well. A robot is operated in an unknown test environment. The
+														results of this result are shown in the figure below.
+														<div class="image fit">
+															<img src="images/robotics/ekfSLAM.png" />
+														</div>
+													</p>
+													<p>
+														The fast SLAM algorithm in which localization is based on Particle Filter (PF) using
+														depth sensor data for a robot is integrated with mapping algorithm such that location
+														of the obstacle is estimated using EKF. A robot is operated in an unknown test environment. The
+														results of this result are shown in the figure below.
+														<div class="image fit">
+															<img src="images/robotics/fastSLAM.png" />
+														</div>
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="item">
+										<div class="image fit trigger">
+											<img src="images/robotics/cellDecomp.png" alt="" />
+											<header>
+												<h3>Motion Planning: Cellular Decomposition</h3>
+											</header>
+										</div>
+										<div class="modal">
+											<div class="modal-content">
+												<span class="close-button">×</span>
+												<h3>Motion Planning: Cellular Decomposition</h3>
+												<div class="modal-body">
+													<p>
+														This project was a part of a larger umbrella-project of implenting
+														motion planning algorithms. Cellular Decomposition is an algorithm
+														where any given polygonal map is sub divided into convex polygonal
+														space. Each convex polygon is assigned a node on geometric center,
+														midpoint of left edge, and midpoint of right edge.
+													</p>
+													<p>
+														<strong>Github Link: </strong><a href="https://github.com/pamraat/port-roadmap">https://github.com/pamraat/port-roadmap</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license and iRobotCreateSimulator toolbox
+														which can be downloaded from <a href="https://github.com/autonomousmobilerobots/iRobotCreateSimulatorToolbox">here</a>.
+													</p>
+													<p>
+														The random polygonal environment is provided, and the task is to
+														generate a roadmap for any intial point-goal pair on this map.
+														<div class="image fit">
+															<img src="images/robotics/polygonEnv.png" />
+														</div>
+														Definition of a convex polygon is that two points on the convex
+														polygon can be connected by a straight line fully contained in
+														that polygon. By that definition, if we are able to decompose
+														a non-convex polygonal shape into multiple convex-polygonal shape,
+														we can generate a create a complete roadmap in that space. The 
+														image below shows roadmap generated in a random polygon environment.
+														<div class="image fit">
+															<img src="images/robotics/cellDecomp.png" />
+														</div>
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="item">
+										<div class="image fit trigger">
+											<img src="images/robotics/ekfdepth.png" alt="" />
+											<header>
+												<h3>Localization using Extended Kalman Filter</h3>
+											</header>
+										</div>
+										<div class="modal">
+											<div class="modal-content">
+												<span class="close-button">×</span>
+												<h3>Localization using Extended Kalman Filter</h3>
+												<div class="modal-body">
+													<p>
+														This project was developed to localize the robot based on depth camera
+														data and compare with overhead localization and dead reckoning from
+														odometry data. The algorithms can handle discontinuous readings,
+														however, robustness depends on initialization.
+													</p>
+													<p>
+														<strong>Github Link: </strong> <a href="https://github.com/pamraat/port-localization">https://github.com/pamraat/port-localization</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license and iRobotCreateSimulator toolbox
+														which can be downloaded from <a href="https://github.com/autonomousmobilerobots/iRobotCreateSimulatorToolbox">here</a>.
+													</p>
+													<p>
+														Initially, grid-based localization is set up to lay grounds for Kalman Filter based
+														algorithms. A low resolution grid is used, and the depth sensor data is fed into
+														the algorithm. The result for 10x10 grid is shown below.
+													</p>
+													<div class="image fit">
+														<img src="images/robotics/gridLow.png" />
+													</div>
+													<p>
+														This is compared to a high resolution grid, and result is shown below, which conforms
+														better to the expected result.
+													</p>
+													<div class="image fit">
+														<img src="images/robotics/gridHigh.png" />
+													</div>
+													<p>
+														Next, the same data is fed to Stationary Kalman filter and the next 2 images show
+														results for different initializations. Both results conform to expectations.
+													</p>
+													<div class="image fit">
+														<img src="images/robotics/KFplot.png" />
+														<img src="images/robotics/KFplot2.png" />
+													</div>
+													<p>
+														A localization algorithm based on Extended Kalman Filter using depth sensor data
+														for a robot is developed. Extended Kalman Filter(EKF) is used instead of Kalman Filter
+														as nonlinear variations in depth measurements based on robot motion are expected
+														along with discontinuities. The performance of EKF is shown in the figure below. 
+													</p>
+													<div class="image fit">
+														<img src="images/robotics/ekfdepth.png" />
+													</div>
+													<p>
+														These codes used in the simulator were implemented on a
+														real robot. The figure below shows the performance of
+														Extended Kalman Filter. Clearly, the error buildup is
+														signifcant due to motor slipping, sensing noise, and error
+														instilled during collision with walls. Advanced sensor
+														data filters were used to minimize the
+														localization errors. The reason behind the deviation
+														towards the end of motion is due to malfunctioning filters 
+														in wide open space where depth data is highly erroneous. 
+														<div class="image fit">
+															<img src="images/robotics/EKFReal.jpeg" />
+														</div>
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="item">
+										<div class="vid fit trigger">
+											<video class="lazy" autoplay loop muted playsinline poster="images/robotics/robAct1.jpg">
+												<source data-src="images/robotics/robAct.mp4" type=video/mp4>
+											</video>
+											<header>
+												<h3>Robot Actuation and Control</h3>
+											</header>
+										</div>
+										<div class="modal">
+											<div class="modal-content">
+												<span class="close-button">×</span>
+												<h3>Robot Actuation and Control</h3>
+												<div class="modal-body">
+													<p>
+														This project was developed to control the robot actuators,
+														communicate with ground computer, and acquire & analyze sensor data.
+														The algorithms are robust and can handle any unexpected issues in control,
+														communication and sensing.
+													</p>
+													<p>
+														<strong>Github Link: </strong> <a href="https://github.com/pamraat/port-robot-actuation">https://github.com/pamraat/port-robot-actuation </a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license and iRobotCreateSimulator toolbox
+														which can be downloaded from <a href="https://github.com/autonomousmobilerobots/iRobotCreateSimulatorToolbox">here</a>.
+													</p>
+													<div class="vid fit">
+														<video class="lazy" autoplay loop muted playsinline poster="images/robotics/robVisitWP1.jpg">
+															<source data-src="images/robotics/robVisitWP.mp4" type=video/mp4>
+														</video>
+													</div>
+													<p>
+														The robot is a modified roomba controlled with Raspberry Pi 3 Model B.
+														For overhead localization, video camera was used. Moreover, Real Sense Depth camera,
+														bump sensors and odometry sensor was installed on the robot.
+														<br>
+														In this project, the robot uses feedback linearization to move form
+														its current location to the goal. In the video shown above, robot
+														moves from (0, 0) to (-3, 0) to (0, -3) to (3, 0) to (0, 3). The robot
+														uses bumb sensor to detect collision with walls, backs up, turns 30&deg
+														counter clockwise and continues moving.
+													</p>
+													<div class="vid fit">
+														<video class="lazy" autoplay loop muted playsinline poster="images/robotics/robAct1.jpg">
+															<source data-src="images/robotics/robAct.mp4" type=video/mp4>
+														</video>
+													</div>
+													<p>
+														The codes used in the simulator were implemented on a
+														real robot. The figure below describes the actuation 
+														error.
+														<div class="image fit">
+															<img src="images/robotics/2_1a_1.png" />
+														</div>
+														The image below shows robot response to feedback linearization
+														for different feedback gain &epsilon, where * represent the points
+														it is attempting to visit.
+														<div class="image fit">
+															<img src="images/robotics/2_4_b_plot.jpg" />
+														</div>
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<div class="vid fit trigger">
+											<video class="lazy" autoplay loop muted playsinline poster="images/robotics/RRT1.jpg">
+												<source data-src="images/robotics/RRT.mp4" type=video/mp4>
+											</video>
+											<header>
+												<h3>Motion Planning: Rapidly-Exploring Random Trees</h3>
+											</header>
+										</div>
+										<div class="modal">
+											<div class="modal-content">
+												<span class="close-button">×</span>
+												<h3>Motion Planning: Rapidly-Exploring Random Trees</h3>
+												<div class="modal-body">
+													<p>
+														This project was a part of a larger umbrella-project of implenting
+														motion planning algorithms. Rapidly-Exploring Random Trees (RRT) is
+														an algorithm by which the road-tree rapidly grows till it finds a
+														direct line of sight path towards goal.
+													</p>
+													<p>
+														<strong>Github Link: </strong><a href="https://github.com/pamraat/port-roadmap">https://github.com/pamraat/port-roadmap</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license and iRobotCreateSimulator toolbox
+														which can be downloaded from <a href="https://github.com/autonomousmobilerobots/iRobotCreateSimulatorToolbox">here</a>.
+													</p>
+													<p>
+														RRT are chance-based algorithms, i.e., it is quite possible that
+														it takes very few computations to converge to otherwise very
+														complicated solution, or it may take significantly large Computational
+														efforts to converge to a relatively simple problem. However, it can
+														be mathematically shown that RRT will always discover a roadmap.
+														The video below shows RRT in action, where blue diamond represent
+														the goal point. Note the intermittent red dashed lines, they represent the tree
+														branches rejected by the algorithm as it must be violating one or
+														more criteria. 
+														<div class="vid fit">
+															<video class="lazy" autoplay loop muted playsinline poster="images/robotics/RRT1.jpg">
+																<source data-src="images/robotics/RRT.mp4" type=video/mp4>
+															</video>
+														</div>
+														The RRTs perform well in real life as well. The performane of an 
+														RRT algorithm implemented on a real robot is shown in the figure
+														below. Note that the lines depicted here are thick walls, and RRT
+														algorithm takes into account the thickness.
+														<div class="image fit">
+															<img src="images/robotics/RRTReal.png" />
+														</div>
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="item">
+										<div class="image fit trigger">
+											<img src="images/robotics/visibility.png" alt="" />
+											<header>
+												<h3>Motion Planning: Probabilistic Roadmapping</h3>
+											</header>
+										</div>
+										<div class="modal">
+											<div class="modal-content">
+												<span class="close-button">×</span>
+												<h3>Motion Planning: Probabilistic Roadmapping</h3>
+												<div class="modal-body">
+													<p>
+														This project was a part of a larger umbrella-project of implenting
+														motion planning algorithms. Probabilistic Roadmapping (PRM) are
+														a set of algorithm which combine elements of both probabilistic
+														reasoning and graph-based methods to generate feasible paths for
+														a robot to navigate from a starting point to a goal point.
+													</p>
+													<p>
+														<strong>Github Link: </strong><a href="https://github.com/pamraat/port-PRM">https://github.com/pamraat/port-PRM</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license and iRobotCreateSimulator toolbox
+														which can be downloaded from <a href="https://github.com/autonomousmobilerobots/iRobotCreateSimulatorToolbox">here</a>.
+													</p>
+													<p>
+														There are four PRM based methods implemented on the polygon
+														environment shown in the figure below. Note that the PRM doesn't
+														guarantee generation of a complete roadmap, and it significantly
+														depends on complexity of the maps and number of sample points.
+														<div class="image fit">
+															<img src="images/robotics/polygonEnv.png"/>
+														</div>
+														The figure below is a uniform sampling based PRM. In this,
+														the points are randomly generated in free accessible space
+														and the roadmap is generated by connecting each point to
+														each point in line of sight. 50 points are sampled in the space.
+														<div class="image fit">
+															<img src="images/robotics/uni.png"/>
+														</div>
+														The figure below is a low discrepancy sampling based PRM. In this,
+														the points are randomly generated in free accessible space, however,
+														all the points belong to halton set, which mathematically spans
+														space with lowest discrepancy. The roadmap is generated by connecting each point to
+														each point in line of sight. 50 points are sampled in the space.
+														<div class="image fit">
+															<img src="images/robotics/lowdiscrep.png"/>
+														</div>
+														The figure below is a low discrepancy sampling based PRM. In this,
+														the points are randomly generated in free accessible space, however,
+														all the points belong grid-like discretization, which mathematically spans
+														space with lowest dispersion. The roadmap is generated by connecting each point to
+														each point in line of sight. 50 points are sampled in the space.
+														<div class="image fit">
+															<img src="images/robotics/lowdisp.png"/>
+														</div>
+														The figure below shows Visibility PRM. Instead of just randomly
+														sampling in the free space, this algorithm considers the notion of
+														visibility between sampled points. A new point is accepted
+														if and only if the new points provides access to new 
+														region of free space which was inaccessible by already existing
+														tree. This is extremely efficient roadmap, however computationally
+														expensive.
+														<div class="image fit">
+															<img src="images/robotics/visibility.png"/>
+														</div>
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="item">
+										<div class="image fit trigger">
+											<img src="images/robotics/auditory.png" alt="" />
+											<header>
+												<h3>Model Predictive Control in Cochlear Implants</h3>
+											</header>
+										</div>
+										<div class="modal">
+											<div class="modal-content">
+												<span class="close-button">×</span>
+												<h3>Model Predictive Control in Cochlear Implants</h3>
+												<div class="modal-body">
+													<p>
+														This project was done to demonstrate the utility of Model Predictive
+														Control (MPC) in adaptive and learning systems. The
+														application of such systems spans wide range of engineering
+														applications, from aircraft control to biomechanics.
+													</p>
+													<p>
+														<strong>Journal Paper link:</strong><a href="https://doi.org/10.47852/bonviewJCCE3202768"> https://doi.org/10.47852/bonviewJCCE3202768</a>
+														<br>
+														<strong>Notes:</strong> To access this journal, you'll need a valid institutional or personal subscription
+														to Journal of Cognitive and Computational engineering.
+													</p>
+													<p>
+														A digital twin of auditory system is created in Simulink.
+														The system idenfication of this model is conducted using
+														system idenfication toolbox of MATLAB. The transfer function
+														is then used to build a system with MPC and intelligent
+														feedforward system. The results of sound processing are
+														then compared with standard open loop cochlear implants.
+														The first following image shows the response of standard cochlear
+														implants to 600 Hz to 1200 Hz chirp signal, and the
+														second image represents MPC + feedfrward controlled
+														response of cochlear implants.
+														<div class="image fit">
+															<img src="images/robotics/openEar.png" />
+														</div>
+														<div class="image fit">
+															<img src="images/robotics/mpcEar.png" />
+														</div>
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="item">
+										<div class="image fit trigger">
+											<img src="images/robotics/navMain.png" alt="" />
+											<header>
+												<h3>Motion Planning: Navigation Functions</h3>
+											</header>
+										</div>
+										<div class="modal">
+											<div class="modal-content">
+												<span class="close-button">×</span>
+												<h3>Motion Planning: Navigation Functions</h3>
+												<div class="modal-body">
+													<p>
+														This project was a part of a larger umbrella-project of implenting
+														motion planning algorithms. Navigation functioms are mathematical
+														representation of the environment such that the gradient of this
+														representation always converge to the goal on the map.
+													</p>
+													<p>
+														<strong>Github Link: </strong><a href="https://github.com/pamraat/port-roadmap">https://github.com/pamraat/port-roadmap</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license and iRobotCreateSimulator toolbox
+														which can be downloaded from <a href="https://github.com/autonomousmobilerobots/iRobotCreateSimulatorToolbox">here</a>.
+													</p>
+													<p>
+														The limitation of such method is that the implementation on 
+														non circular geometries is excessively complicated. However,
+														for the purpose of robot navigation, overestimation of objects'
+														dimension is not a problem in most case, and an obstacle of anyshape
+														can be represented by multiple overlapping circles to easily
+														navigation functions around them. The following video shows
+														robot control using navigation functions, where the squares are
+														approximated as circles.
+														<div class="vid fit">
+															<video class="lazy" autoplay loop muted playsinline poster="images/robotics/potentialMain1.jpg">
+																<source data-src="images/robotics/potentialMain.mp4" type=video/mp4>
+															</video>
+														</div>
+														The trajectory plot of how robot perceived this environment is
+														shown in the figure below.
+														<div class="image fit">
+															<img src="images/robotics/potTraj.png" />
+														</div>
+														This map has associated navigation function as shown in figure below.
+														Note that the high values of potentials around the wall push the robot towards
+														sink, which is goal point at (0, 0).
+														<div class="image fit">
+															<img src="images/robotics/potFun.png" />
+														</div>
+														These codes used in the simulator were implemented on a
+														real robot. The figure below shows the comparison of
+														actual performance when compared to simulator. The actuation
+														errors and actuation response time delays are the major
+														reason behind the deviation.
+														<div class="image fit">
+															<img src="images/robotics/potRealTraj.png" />
+														</div>
+														The potential function developed by the algorithm for
+														the the real map is shown in the figure below.
+														<div class="image fit">
+															<img src="images/robotics/potReal.png" />
+														</div>
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p>Got a job you think I am a good fit for? Just send me a quick message and
+								I'll be reaching out within 24 hours!
+							</p>
+
+							<form method="POST" action="https://formsubmit.co/sinhashubh29@gmail.com">
+								<div class="row">
+									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="col-12">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<input type="submit" value="Send Message" />
+									</div>
+									<input type="hidden" name="_next" value="https://pamraat.github.io/portfolio/robotics.html" />
+									<input type="hidden" name="_autoresponse" value="Hello! Thanks for reaching out. I've received your message, and will be contacting you within 24 hours!" />
+								</div>
+							</form>
+						</div>
+					</section>
+				
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; 2023 Pamraat Parmar. All rights reserved.</li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
